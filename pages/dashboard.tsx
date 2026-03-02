@@ -34,11 +34,7 @@ useEffect(() => {
     "Tip: Share with friends in fan groups",
     "Tip: Use relevant hashtags like #PFW2026",
     // add/remove as you like, or set to [] if you don't want tips displayed
-  ]);
-}, []);
-    }, []);
-
-    return (
+ 
         <div className="p-4">
             <h1 className="text-2xl font-bold mb-4">Dashboard</h1>
             <select onChange={(e) => setPlatform(e.target.value)} className="mb-4 p-2 border rounded">
