@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { getRealTimeMetrics, getEngagementTips } from '../api'; // Assume these functions are implemented
+import { getRealTimeMetrics, getEngagementTips } from '../lib/api';  // add /lib/
 
 const Dashboard = () => {
     const [metrics, setMetrics] = useState({ likes: 0, comments: 0, shares: 0 });
