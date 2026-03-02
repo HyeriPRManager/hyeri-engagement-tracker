@@ -17,12 +17,25 @@ const Dashboard = () => {
 }, [platform]);
     // TODO: Later fix getRealTimeMetrics to return proper object { likes, comments, shares, ... }
 
-    useEffect(() => {
-        const fetchTips = async () => {
-            const data = await getEngagementTips();
-            setTips(data);
-        };
-        fetchTips();
+    // Hardcoded metrics (update numbers here manually when checking posts)
+useEffect(() => {
+  setMetrics({
+    likes: 0,      // e.g. change to 450000 after viewing Instagram post
+    comments: 0,
+    shares: 0,
+    // views: 0,   // add if your state has views
+  });
+}, [platform]);   // keep if platform is a variable
+
+// Hardcoded tips/engagement suggestions (or empty array if not needed)
+useEffect(() => {
+  setTips([
+    "Tip: Comment meaningfully to boost algorithm",
+    "Tip: Share with friends in fan groups",
+    "Tip: Use relevant hashtags like #PFW2026",
+    // add/remove as you like, or set to [] if you don't want tips displayed
+  ]);
+}, []);
     }, []);
 
     return (
