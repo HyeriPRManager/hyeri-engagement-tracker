@@ -6,14 +6,15 @@ const Dashboard = () => {
     const [tips, setTips] = useState([]);
     const [platform, setPlatform] = useState('all');
 
-    useEffect(() => {
-  // Temporarily hardcode metrics to fix build error
+   useEffect(() => {
+  // Hardcoded placeholder metrics to fix build (update these manually later)
   setMetrics({
-    likes: 0,      // change these to real/current numbers later
+    likes: 0,      // ← change to real number, e.g. 250000
     comments: 0,
     shares: 0,
+    // add views: 0, if your state includes it
   });
-}, [platform]);  // keep dependency if platform changes per page
+}, [platform]);
     // TODO: Later fix getRealTimeMetrics to return proper object { likes, comments, shares, ... }
 
     useEffect(() => {
